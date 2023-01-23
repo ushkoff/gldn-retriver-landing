@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
-import Image from 'next/image';
 
 import { Container } from '../../../layouts';
 import { useCheckMobileScreen } from '../../../hooks';
+import TradingViewWidget from './TradingViewWidget';
 
 const Chart: FC = () => {
     const isHeaderMobile = useCheckMobileScreen({ breakpoint: 971 });
@@ -23,13 +23,7 @@ const Chart: FC = () => {
                 )}
 
                 <div className='mt-6'>
-                    <Image
-                        src='/img/chart.png'
-                        alt='chart'
-                        width={1000}
-                        height={500}
-                        className='w-full'
-                    />
+                    <TradingViewWidget/>
                 </div>
             </Container>
         </section>
