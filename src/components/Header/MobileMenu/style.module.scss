@@ -1,0 +1,62 @@
+@import '../../../styles/utils/vars';
+
+.burgerButton {
+  cursor: pointer;
+  width: 24px;
+  height: 22px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  
+  span {
+    display: block;
+    background: $mainFontColor;
+    width: 24px;
+    height: 3.5px;
+    border-radius: 1px;
+  }
+
+  span::before {
+    content: '';
+    display: block;
+    background: $mainFontColor;
+    width: 24px;
+    height: 3.5px;
+    position: relative;
+    top: -8px;
+    border-radius: 1px;
+  }
+
+  span::after {
+    content: '';
+    display: block;
+    background: $mainFontColor;
+    width: 24px;
+    height: 3.5px;
+    position: relative;
+    bottom: -4.5px;
+    border-radius: 1px;
+  }
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  & > li {
+    line-height: 50px;
+  }
+}
+.nestedMenu {
+  li {
+    line-height: 40px;
+    margin-left: 20px;
+  }
+}
+
+.arrow {
+  transform: rotate(0);
+  transition: all 0.1s;
+}
+.arrowActive {
+  transform: rotate(180deg);
+}

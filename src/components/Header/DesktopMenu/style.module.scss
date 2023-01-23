@@ -1,0 +1,24 @@
+@import '../../../styles/utils/vars';
+
+.menu {
+  display: flex;
+  & > li {
+    margin-right: 55px;
+    line-height: 40px;
+  }
+  & > li:last-child {
+    margin-right: 0;
+  }
+}
+.nestedMenu {
+  padding: 0 10px;
+  background: $mainBgColor;
+}
+
+.arrow {
+  transform: rotate(0);
+  transition: all 0.1s;
+}
+.arrowActive {
+  transform: rotate(180deg);
+}

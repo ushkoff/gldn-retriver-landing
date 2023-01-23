@@ -1,0 +1,15 @@
+@import '../../../styles/utils/vars';
+
+.videoContainer {
+  height: 600px;
+
+  @media screen and (max-width: $smDesktopWidth) {
+    height: 500px;
+  }
+  @media screen and (max-width: $tableWidth) {
+    height: 400px;
+  }
+  @media screen and (max-width: $phoneWidth) {
+    height: 300px;
+  }
+}

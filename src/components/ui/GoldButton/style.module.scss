@@ -1,0 +1,70 @@
+@import '../../../styles/utils/vars';
+@import '../../../styles/utils/mixins';
+
+.goldButton {
+  display: block;
+  background: $goldBg;
+  color: $darkGreyFont;
+  font-weight: 600;
+  border-radius: 5px;
+
+  div:first-child {
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    span:first-child {
+      font-size: 12px;
+      text-transform: uppercase;
+      position: relative;
+      bottom: -1px;
+    }
+    span:last-child {
+      font-size: rem(20px);
+      text-transform: uppercase;
+    }
+  }
+
+  .greyStripe {
+    width: 100%;
+    height: 5px;
+    background: $greyBg;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+}
+
+.goldButtonLarge {
+  display: block;
+  background: linear-gradient(0deg, rgba(216, 180, 80, 0.14), rgba(216, 180, 80, 0.14)), $mainFontColor;
+  color: $goldFont;
+  font-weight: 600;
+  border-radius: 10px;
+
+  div:first-child {
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    span:first-child {
+      font-size: rem(24px);
+      text-transform: uppercase;
+      position: relative;
+      bottom: -1px;
+    }
+    span:last-child {
+      font-size: rem(45px);
+      line-height: 55px;
+    }
+  }
+
+  .greyStripe {
+    width: 100%;
+    height: 7px;
+    background: $goldFont;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+}

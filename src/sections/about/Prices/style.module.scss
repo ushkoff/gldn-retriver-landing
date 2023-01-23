@@ -1,0 +1,22 @@
+@import '../../../styles/utils/vars';
+@import '../../../styles/utils/mixins';
+
+.blueStripe {
+  background: $blueBg;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 5px 0;
+
+  span {
+    display: block;
+    font-size: rem(30px);
+    margin-right: rem(70px);
+    white-space: nowrap;
+    
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

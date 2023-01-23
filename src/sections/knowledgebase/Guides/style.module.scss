@@ -1,0 +1,38 @@
+@import '../../../styles/utils/vars';
+@import '../../../styles/utils/mixins';
+
+.guide {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), radial-gradient(49.87% 49.87% at 64.72% 100%, rgba(182, 147, 65, 0) 0%, #3A59A6 0.01%, #3A59A6 0.02%, rgba(58, 89, 166, 0.1) 94.79%);
+  box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+
+  h6 {
+    font-size: rem(32px);
+  }
+
+  min-height: 343px;
+}
+
+.slider {
+  :global(.swiper-pagination) {
+    position: relative;
+    margin-top: 35px;
+  }
+
+  :global(.swiper-pagination-bullet) {
+    background: white;
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+    opacity: 1;
+  }
+
+  :global(.swiper-pagination-bullet-active) {
+    background-color: $goldFont;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    position: relative;
+    top: 3px;
+  }
+}

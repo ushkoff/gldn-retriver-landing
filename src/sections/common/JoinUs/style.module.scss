@@ -1,0 +1,25 @@
+@import '../../../styles/utils/vars';
+@import '../../../styles/utils/mixins';
+
+.title {
+  text-align: center;
+  font-size: rem(60px);
+  text-transform: uppercase;
+  strong {
+    color: $goldFont;
+    font-weight: inherit;
+  }
+
+  @media screen and (max-width: $tableWidth) {
+    font-size: rem(30px);
+  }
+}
+
+.socials {
+  img {
+    @media screen and (max-width: $tableWidth) {
+      width: 70px;
+      height: 70px;
+    }
+  }
+}

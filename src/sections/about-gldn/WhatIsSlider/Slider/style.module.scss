@@ -1,0 +1,31 @@
+@import '../../../../styles/utils/vars';
+@import '../../../../styles/utils/mixins';
+
+.slider {
+  h6 {
+    font-size: rem(30px);
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+
+  :global(.swiper-pagination-bullet) {
+    background: white;
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+    opacity: 1;
+  }
+
+  :global(.swiper-pagination-bullet-active) {
+    background-color: $goldFont;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    position: relative;
+    top: 3px;
+  }
+
+  .sliderElement {
+    height: 100%;
+  }
+}
