@@ -97,7 +97,7 @@ const Introduction: FC = () => {
                             placeholder='blur'
                             blurDataURL='/img/logo.png'
                         />
-                        {isMobile && <div className='bg-black/[0.8] w-full flex justify-center items-center h-24 absolute top-1/3' style={{boxShadow: '0px 0px 30px 20px black'}}>
+                        {isMobile && <div className='bg-black/[0.8] w-full flex justify-center items-center h-24 fixed bottom-0 left-0 right-0' style={{boxShadow: '0px 0px 30px 20px black'}}>
                             {buyGldnButton()}
                         </div>}
                         <div className='flex w-full justify-center md:mt-8 mt-4 pl-2'>
