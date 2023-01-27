@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import { useRouter } from 'next/router';
 import styles from './style.module.scss';
 import cls from 'classnames';
 import Image from 'next/image';
@@ -9,6 +10,7 @@ import { Container } from '../../layouts';
 import GoldButton from '../ui/GoldButton';
 
 const Footer: FC = () => {
+    const router = useRouter();
     const isMobile = useCheckMobileScreen({ breakpoint: 976 });
 
     return (
@@ -36,12 +38,12 @@ const Footer: FC = () => {
                             <div className='flex items-center'>
                                 <GoldButton
                                     title={['Buy', 'GLDN']}
-                                    action={() => console.log('Buy GLDN')}
+                                    action={() => router.push('/dapp')}
                                     className='mr-6'
                                 />
                                 <GoldButton
                                     title={['Launch', 'APP']}
-                                    action={() => console.log('Launch App')}
+                                    action={() => router.push('/dapp')}
                                 />
                             </div>
                         </div>
@@ -65,12 +67,12 @@ const Footer: FC = () => {
                             <div className='flex items-center'>
                                 <GoldButton
                                     title={['BUY']}
-                                    action={() => console.log('Buy GLDN')}
+                                    action={() => router.push('/dapp')}
                                     className='mr-6'
                                 />
                                 <GoldButton
                                     title={['DAPP']}
-                                    action={() => console.log('Launch App')}
+                                    action={() => router.push('/dapp')}
                                 />
                             </div>
                         </div>

@@ -1,4 +1,5 @@
 import React, { FC, useState } from 'react';
+import { useRouter } from 'next/router';
 import styles from './style.module.scss';
 import cls from 'classnames';
 import config from '../../../config';
@@ -10,6 +11,7 @@ import { useCheckMobileScreen } from '../../../hooks';
 import { SocialsWidget } from '../../../components';
 
 const Introduction: FC = () => {
+    const router = useRouter();
     const isMobile = useCheckMobileScreen({ breakpoint: 768 });
     const [isCopied, setIsCopied] = useState(false);
 
@@ -26,7 +28,7 @@ const Introduction: FC = () => {
             Gold Retriever is a decentralized financial asset that utilizes volume to
             drive rewards back to its holders in the form of the gold-backed stablecoin
             <strong> PAX Gold ($PAXG)</strong>.
-            {isMobile && (
+            {(isMobile && !openedDesc) && (
                 <Image
                     src='/img/icons/golden-plus.png'
                     alt='open'
@@ -70,7 +72,7 @@ const Introduction: FC = () => {
         <GoldButton
             type='large'
             title={['Buy', 'GLDN']}
-            action={() => console.log('Buy GLDN')}
+            action={() => router.push('/dapp')}
         />
     );
 
@@ -92,6 +94,8 @@ const Introduction: FC = () => {
                             alt='logo'
                             width={!isMobile ? 435 : 335}
                             height={!isMobile ? 435 : 335}
+                            placeholder='blur'
+                            blurDataURL='/img/logo.png'
                         />
                         {isMobile && <div className='bg-black/[0.8] w-full flex justify-center items-center h-24 absolute top-1/3' style={{boxShadow: '0px 0px 30px 20px black'}}>
                             {buyGldnButton()}

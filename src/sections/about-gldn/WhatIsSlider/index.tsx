@@ -1,4 +1,5 @@
 import React, { FC, useState } from 'react';
+import { useRouter } from 'next/router';
 import cls from 'classnames';
 import styles from './style.module.scss';
 import config from '../../../config';
@@ -8,8 +9,10 @@ import { Container } from '../../../layouts';
 import GoldButton from '../../../components/ui/GoldButton';
 import { useCheckMobileScreen } from '../../../hooks';
 import Slider from './Slider';
+import { SocialsWidget } from '../../../components';
 
 const WhatIsSlider: FC = () => {
+  const router = useRouter();
   const isMobile = useCheckMobileScreen({ breakpoint: 1200 });
 
   const [activeItem, setActiveItem] = useState(0);
@@ -36,12 +39,13 @@ const WhatIsSlider: FC = () => {
     <GoldButton
         type='large'
         title={['Buy', 'GLDN']}
-        action={() => console.log('Buy GLDN')}
+        action={() => router.push('/dapp')}
     />
   );
 
   return (
       <section className='mb-8' id='whatIsSlider'>
+          {!isMobile && <SocialsWidget/>}
           <Container>
               <h1 className={cls('uppercase md:text-6xl text-4xl font-bold', !isMobile && 'ml-10')}>What is <strong>GLDN?</strong></h1>
 

@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import { useRouter } from 'next/router';
 import cls from 'classnames';
 import styles from './style.module.scss';
 
@@ -22,6 +23,8 @@ const items = [
 ];
 
 const FAQ: FC = () => {
+    const router = useRouter();
+
     const handleOpenItem = (event: any) => {
         const itemHeader = event.currentTarget;
         const item = itemHeader.parentNode;
@@ -73,7 +76,7 @@ const FAQ: FC = () => {
                 <GoldButton
                     type='large'
                     title={['More', 'FAQs']}
-                    action={() => console.log('More FAQs...')}
+                    action={() => router.push('/learn')}
                 />
             </div>
         </Container>

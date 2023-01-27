@@ -18,7 +18,7 @@ const items = [
             {title: 'uniswap', url: 'https://uniswap.org/'},
             {title: 'paxg', url: 'https://uniswap.org/'}
         ],
-        url: 'https://www.google.com'
+        url: '/article'
     },
     {
         id: 1234,
@@ -29,7 +29,7 @@ const items = [
             {title: 'commodities', url: 'https://uniswap.org/'},
             {title: 'securities', url: 'https://uniswap.org/'}
         ],
-        url: 'https://www.google.com'
+        url: '/article'
     },
     {
         id: 12345,
@@ -51,7 +51,7 @@ const items = [
             {title: 'uniswap', url: 'https://uniswap.org/'},
             {title: 'paxg', url: 'https://uniswap.org/'}
         ],
-        url: 'https://www.google.com'
+        url: '/article'
     },
     {
         id: 12347,
@@ -62,7 +62,7 @@ const items = [
             {title: 'uniswap', url: 'https://uniswap.org/'},
             {title: 'paxg', url: 'https://uniswap.org/'}
         ],
-        url: 'https://www.google.com'
+        url: '/article'
     },
     {
         id: 12348,
@@ -73,7 +73,7 @@ const items = [
             {title: 'uniswap', url: 'https://uniswap.org/'},
             {title: 'paxg', url: 'https://uniswap.org/'}
         ],
-        url: 'https://www.google.com'
+        url: '/article'
     }
 ];
 

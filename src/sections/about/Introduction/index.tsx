@@ -1,4 +1,5 @@
 import React, { FC, useState } from 'react';
+import { useRouter } from 'next/router';
 import cls from 'classnames';
 import styles from './style.module.scss';
 
@@ -10,6 +11,7 @@ import { SocialsWidget } from '../../../components';
 import { useCheckMobileScreen } from '../../../hooks';
 
 const Introduction: FC = () => {
+    const router = useRouter();
     const isMobile = useCheckMobileScreen({ breakpoint: 768 });
     const [isCopied, setIsCopied] = useState(false);
 
@@ -48,7 +50,7 @@ const Introduction: FC = () => {
         <GoldButton
             type='large'
             title={['Buy', 'GLDN']}
-            action={() => console.log('Buy GLDN')}
+            action={() => router.push('/dapp')}
         />
     );
 

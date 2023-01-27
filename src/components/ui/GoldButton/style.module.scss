@@ -3,10 +3,16 @@
 
 .goldButton {
   display: block;
-  background: $goldBg;
-  color: $darkGreyFont;
+  background: linear-gradient(0deg, rgba(216, 180, 80, 0.14), rgba(216, 180, 80, 0.14)), $mainFontColor;
+  box-shadow: 0px 4px 0px $goldDarkFont;
+  color: $goldDarkFont;
   font-weight: 600;
-  border-radius: 5px;
+  border-radius: 10px;
+  transition: 0.1s all;
+
+  &:hover {
+    box-shadow: 0px 1px 0px #B69341;
+  }
 
   div:first-child {
     padding: 0 12px;
@@ -14,6 +20,9 @@
     align-items: center;
     justify-content: center;
 
+    span {
+      text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.55);
+    }
     span:first-child {
       font-size: 12px;
       text-transform: uppercase;
@@ -25,23 +34,24 @@
       text-transform: uppercase;
     }
   }
-
-  .greyStripe {
-    width: 100%;
-    height: 5px;
-    background: $greyBg;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-  }
 }
 
 .goldButtonLarge {
   display: block;
   background: linear-gradient(0deg, rgba(216, 180, 80, 0.14), rgba(216, 180, 80, 0.14)), $mainFontColor;
-  color: $goldFont;
+  box-shadow: 0px 4px 0px $goldDarkFont;
+  color: $goldDarkFont;
   font-weight: 600;
   border-radius: 10px;
+  transition: 0.1s all;
 
+  &:hover {
+    box-shadow: 0px 1px 0px #B69341;
+  }
+
+  span {
+    text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.55);
+  }
   div:first-child {
     padding: 0 15px;
     display: flex;
@@ -59,12 +69,11 @@
       line-height: 55px;
     }
   }
+}
 
-  .greyStripe {
-    width: 100%;
-    height: 7px;
-    background: $goldFont;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-  }
+.textBase {
+  font-size: 14px !important;
+  text-transform: none !important;
+  font-weight: 400 !important;
+  padding: 5px 0;
 }

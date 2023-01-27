@@ -15,10 +15,11 @@ type Props = {
     type?: string;
     title: Array<string>;
     action: () => void;
-    className?: string
+    className?: string;
+    textBase?: boolean;
 }
 
-const GoldButton: FC<Props> = ({ type = buttonType.DEFAULT, title, action, className }) => {
+const GoldButton: FC<Props> = ({ type = buttonType.DEFAULT, title, action, className, textBase }) => {
     const oneWord = title.length === 1;
     const mainClass = buttonClasses[type];
 
@@ -34,7 +35,7 @@ const GoldButton: FC<Props> = ({ type = buttonType.DEFAULT, title, action, class
                 </div>
             ) : (
                 <div>
-                    <span>{title[0]}</span>
+                    <span className={textBase ? cls(styles.textBase, 'w-20 truncate') : ''}>{title[0]}</span>
                 </div>
             )}
             <div className={styles.greyStripe}></div>

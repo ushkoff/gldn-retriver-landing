@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from 'react';
-import { useCheckMobileScreen } from '../../../../hooks';
+import { useCheckMobileScreen } from '../../hooks';
 
 let tvScriptLoadingPromise;
 
-export default function TradingViewWidget() {
+export default function TradingViewWidget({ height = 673 }) {
     const isMobile = useCheckMobileScreen({ breakpoint: 768 });
     const onLoadScriptRef = useRef();
 
@@ -53,7 +53,7 @@ export default function TradingViewWidget() {
 
     return (
         <div className='tradingview-widget-container'>
-            <div id='tradingview_a83b3' style={{ height: !isMobile ? 673 : 400 }}/>
+            <div id='tradingview_a83b3' style={{ height: !isMobile ? height : 400 }}/>
             <div className="tradingview-widget-copyright">
                 <a href="https://www.tradingview.com/symbols/GLDNWETH/?exchange=UNISWAP" rel="noopener" target="_blank"><span className="blue-text">GLDNWETH chart</span></a> by TradingView
             </div>

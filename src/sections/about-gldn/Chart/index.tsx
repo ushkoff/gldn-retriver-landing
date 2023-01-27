@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 
 import { Container } from '../../../layouts';
 import { useCheckMobileScreen } from '../../../hooks';
-import TradingViewWidget from './TradingViewWidget';
+import TradingViewWidget from '../../../components/TradingViewWidget';
 
 const Chart: FC = () => {
     const isHeaderMobile = useCheckMobileScreen({ breakpoint: 971 });

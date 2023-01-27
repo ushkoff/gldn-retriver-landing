@@ -18,7 +18,7 @@ const items = [
         tags: [
             {title: 'accesswire', url: 'https://uniswap.org/'}
         ],
-        url: 'https://www.google.com'
+        url: '/article'
     },
     {
         id: 1234,
@@ -28,7 +28,7 @@ const items = [
         tags: [
             {title: 'accesswire', url: 'https://uniswap.org/'}
         ],
-        url: 'https://www.google.com'
+        url: '/article'
     }
 ];
 
