@@ -1,4 +1,5 @@
-import React, { FC } from 'react';
+import React, { FC, useRef } from 'react';
+import { useIsVisible } from '../hooks';
 
 import { HomeLayout } from '../layouts';
 import { Header, Footer } from '../components';
@@ -6,16 +7,19 @@ import { Introduction, Metrics, WhatIs, Advantages, Charity } from '../sections/
 import { JoinUs } from '../sections/common';
 
 const Home: FC = () => {
+    const joinUsRef = useRef();
+    const isJoinUsVisible = useIsVisible(joinUsRef);
+
     return (
       <>
         <Header/>
         <HomeLayout>
-            <Introduction/>
+            <Introduction hideMobileBtn={isJoinUsVisible}/>
             <Metrics/>
             <WhatIs/>
             <Advantages/>
             <Charity/>
-            <JoinUs/>
+            <JoinUs ref={joinUsRef}/>
         </HomeLayout>
         <Footer/>
       </>

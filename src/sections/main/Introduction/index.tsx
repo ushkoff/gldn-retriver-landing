@@ -10,7 +10,11 @@ import GoldButton from '../../../components/ui/GoldButton';
 import { useCheckMobileScreen } from '../../../hooks';
 import { SocialsWidget } from '../../../components';
 
-const Introduction: FC = () => {
+type Props = {
+    hideMobileBtn: boolean;
+}
+
+const Introduction: FC<Props> = ({ hideMobileBtn }) => {
     const router = useRouter();
     const isMobile = useCheckMobileScreen({ breakpoint: 768 });
     const [isCopied, setIsCopied] = useState(false);
@@ -97,7 +101,7 @@ const Introduction: FC = () => {
                             placeholder='blur'
                             blurDataURL='/img/logo.png'
                         />
-                        {isMobile && <div className='z-50 bg-black/[0.8] w-full flex justify-center items-center h-24 fixed bottom-0 left-0 right-0' style={{boxShadow: '0px 0px 30px 20px black'}}>
+                        {(isMobile && !hideMobileBtn) && <div className='z-50 bg-black/[0.8] w-full flex justify-center items-center h-24 fixed bottom-0 left-0 right-0' style={{boxShadow: '0px 0px 30px 20px black'}}>
                             {buyGldnButton()}
                         </div>}
                         <div className='flex w-full justify-center md:mt-8 mt-4 pl-2'>

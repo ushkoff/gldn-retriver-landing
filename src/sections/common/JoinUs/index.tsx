@@ -1,13 +1,16 @@
-import React, { FC } from 'react';
+import React from 'react';
 import cls from 'classnames';
 import styles from './style.module.scss';
 
 import config from '../../../config';
 import Image from 'next/image';
 
-const JoinUs: FC = () => {
+type Ref = HTMLButtonElement;
+type Props = {};
+
+const JoinUs = React.forwardRef<Ref, Props>((props, ref) => {
     return (
-        <section className='mt-8 md:mb-40 mb-32' id='joinUs'>
+        <section ref={ref} className='mt-8 md:mb-40 mb-32' id='joinUs'>
             <h3 className={cls(styles.title, 'md:font-semibold font-normal')}>Join our <strong>community</strong></h3>
             <div className={cls(styles.socials, 'md:mt-10 mt-6')}>
                 <ul className='flex justify-center items-center'>
@@ -31,6 +34,6 @@ const JoinUs: FC = () => {
             </div>
         </section>
     );
-};
+});
 
 export default JoinUs;
